@@ -94,12 +94,6 @@ td.day:empty {
   color: white;
   border-color: white;
 }
-.day.current-day {
-  background-color: blue;
-  color: white;
-  border-color: white;
-}
-
 .day.weekend.old-day {
   background-color: rgb(126, 73, 73);
   color: white;
@@ -110,7 +104,11 @@ td.day:empty {
 .day.shortened__day::after {
   content: "*";
 }
-
+.day.current-day {
+  background-color: blue;
+  color: white;
+  border-color: white;
+}
 .day:before {
   bottom: 30px;
   margin-left: -100px;
