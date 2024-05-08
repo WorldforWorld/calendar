@@ -1,24 +1,45 @@
 import React, { useState, useEffect } from "react";
 const Weather = ({ weatherData }) => {
   const { location, current } = weatherData;
-
+  function weatherConditions(condition) {
+    if (condition == "Partly cloudy") {
+      return "Переменная облачность";
+    }
+  }
   return (
     <div className="weather-container">
-      <span className="weather-info">
-        <h4 className="weather-heading">Cейчас</h4>
+      <p className="weather-info">
         {location.name}
-      </span>
+        <h4 className="weather-heading">
+          <b>Cейчас </b>
+        </h4>
+      </p>
 
       <div className="weather-details">
-        <p className="weather-info">Температура: {current.temp_c}°C</p>
-        <p className="weather-info">Ощущается как: {current.feelslike_c}°C</p>
-        <p className="weather-info">Скорость ветра: {current.wind_kph} км/ч</p>
-        <p className="weather-info">Направление ветра: {current.wind_dir}</p>
-        <p className="weather-info">Влажность: {current.humidity}%</p>
-        <p className="weather-info">Облачность: {current.cloud}%</p>
-        <p className="weather-info">Уровень UV: {current.uv}</p>
         <p className="weather-info">
-          Погодные условия: {current.condition.text}
+          <b>Температура:</b> {current.temp_c}°C
+        </p>
+        <p className="weather-info">
+          <b>Ощущается как:</b> {current.feelslike_c}°C
+        </p>
+        <p className="weather-info">
+          <b>Скорость ветра:</b> {current.wind_kph} км/ч
+        </p>
+        <p className="weather-info">
+          <b>Направление ветра:</b> {current.wind_dir}
+        </p>
+        <p className="weather-info">
+          <b>Влажность:</b> {current.humidity}%
+        </p>
+        <p className="weather-info">
+          <b>Облачность:</b> {current.cloud}%
+        </p>
+        <p className="weather-info">
+          <b>Уровень UV:</b> {current.uv}
+        </p>
+        <p className="weather-info">
+          <b>Погодные условия:</b> <br />
+          {weatherConditions(current.condition.text)}
         </p>
       </div>
       <img
