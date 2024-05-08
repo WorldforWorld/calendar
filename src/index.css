@@ -110,25 +110,32 @@ td.day:empty {
   border-color: white;
 }
 .day:before {
+  position: absolute;
+  content: attr(data-title);
+  left: 50%;
   bottom: 30px;
+  display: block;
   margin-left: -100px;
-  padding: 10px;
-  width: 200px;
+  padding: 5px;
+  max-width: 200px;
+  visibility: hidden;
   font-size: 0.8em;
   color: white;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.85);
   border-radius: 5px;
-  content: attr(data-title);
-}
-.day:before {
-  display: block;
-  position: absolute;
-  left: 50%;
-  visibility: hidden;
   opacity: 0;
   margin-bottom: 15px;
   transition: opacity 0.7s;
+}
+.month tr .day:nth-of-type(5):before {
+  left: -117%;
+}
+.month tr .day:nth-of-type(1):before {
+  left: 118%;
+}
+.month tr .day:nth-of-type(4):before {
+  left: -18%;
 }
 .day:hover:before {
   visibility: visible;
@@ -142,6 +149,8 @@ td.day:empty {
   position: fixed;
   top: 50%;
   left: 50%;
+  max-width: 320px;
+  width: 100%;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
@@ -153,6 +162,7 @@ td.day:empty {
 .showWeather {
   position: fixed;
   right: 0;
+  z-index: 99;
 }
 .showWeather,
 .weather-popup button {
@@ -212,6 +222,7 @@ td.day:empty {
 
 .chartContainer {
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .percentageText {
