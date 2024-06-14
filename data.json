@@ -1,0 +1,150 @@
+{
+  "year": 2024,
+  "months": [
+    {
+      "month": "Январь",
+      "dates": [
+        {
+          "day": 1,
+          "name": "Новый год",
+          "work_type": "holiday"
+        },
+        {
+          "day": 2,
+          "name": "Новогодние каникулы",
+          "work_type": "holiday"
+        },
+        {
+          "day": 3,
+          "name": "Новогодние каникулы",
+          "work_type": "holiday"
+        },
+        {
+          "day": 4,
+          "name": "Новогодние каникулы",
+          "work_type": "holiday"
+        },
+        {
+          "day": 5,
+          "name": "Новогодние каникулы",
+          "work_type": "holiday"
+        },
+        {
+          "day": 6,
+          "name": "Новогодние каникулы",
+          "work_type": "holiday"
+        },
+        {
+          "day": 7,
+          "name": "Рождество Христово",
+          "work_type": "holiday"
+        }
+      ]
+    },
+    {
+      "month": "Февраль",
+      "dates": [
+        {
+          "day": 22,
+          "name": "Рабочий день (сокращенный)",
+          "work_type": "half"
+        },
+        {
+          "day": 23,
+          "name": "День защитника Отечества",
+          "work_type": "holiday"
+        }
+      ]
+    },
+    {
+      "month": "Март",
+      "dates": [
+        {
+          "day": 7,
+          "name": "Рабочий день (сокращенный)",
+          "work_type": "half"
+        },
+        {
+          "day": 8,
+          "name": "Международный женский день",
+          "work_type": "holiday"
+        }
+      ]
+    },
+    {
+      "month": "Апрель",
+      "dates": [
+        {
+          "day": 27,
+          "name": "Рабочий день (перенесенный)",
+          "work_type": "work"
+        }
+      ]
+    },
+    {
+      "month": "Май",
+      "dates": [
+        {
+          "day": 1,
+          "name": "Праздник Весны и Труда",
+          "work_type": "holiday"
+        },
+        {
+          "day": 8,
+          "name": "Рабочий день (сокращенный)",
+          "work_type": "half"
+        },
+        {
+          "day": 9,
+          "name": "День Победы",
+          "work_type": "holiday"
+        }
+      ]
+    },
+    {
+      "month": "Июнь",
+      "dates": [
+        {
+          "day": 11,
+          "name": "Рабочий день (сокращенный)",
+          "work_type": "half"
+        },
+        {
+          "day": 12,
+          "name": "День России",
+          "work_type": "holiday"
+        }
+      ]
+    },
+    {
+      "month": "Ноябрь",
+      "dates": [
+        {
+          "day": 2,
+          "name": "Рабочий день (сокращенный)",
+          "work_type": "half"
+        },
+        {
+          "day": 3,
+          "name": "Рабочий день (сокращенный)",
+          "work_type": "half"
+        },
+        {
+          "day": 4,
+          "name": "День народного единства",
+          "work_type": "holiday"
+        }
+      ]
+    },
+    {
+      "month": "Декабрь",
+      "dates": [
+        {
+          "day": 28,
+          "name": "Рабочий день",
+          "work_type": "work"
+        }
+      ]
+    }
+  ]
+}
