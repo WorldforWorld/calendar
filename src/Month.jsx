@@ -5,6 +5,7 @@ const Month = ({ monthData }) => {
   // Получаем текущую дату
   const currentDate = new Date();
   const currentDay = currentDate.getDate();
+  const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getMonth() + 1;
 
   const dayClasses = transpose(monthData.days).map((week) =>
@@ -17,15 +18,18 @@ const Month = ({ monthData }) => {
       if (day !== 0 && day !== undefined) {
         const days = day <= 9 ? "0" + day : day;
         const months = monthIndex <= 9 ? "0" + monthIndex : monthIndex;
-        const data = "2024-" + months + "-" + days;
-        if (rpodCalendar[data].work === "0") {
-          classNames.day += " weekend";
-          classNames.title = rpodCalendar[data].zag;
-        }
-        if (rpodCalendar[data].work === "2") {
-          classNames.day += " shortened__day";
-          classNames.title =
-            rpodCalendar[data].type + " " + rpodCalendar[data].zag;
+        const data = currentYear + "-" + months + "-" + days;
+        const calendarEntry = rpodCalendar[data];
+        if (calendarEntry) {
+          if (rpodCalendar[data].work === "0") {
+            classNames.day += " weekend";
+            classNames.title = rpodCalendar[data].zag;
+          }
+          if (rpodCalendar[data].work === "2") {
+            classNames.day += " shortened__day";
+            classNames.title =
+              rpodCalendar[data].type + " " + rpodCalendar[data].zag;
+          }
         }
       }
       if (day === currentDay && monthIndex === currentMonth) {
