@@ -4,7 +4,9 @@ import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const YearlyProgressCircle = ({ daysPassed }) => {
-  const totalDaysInYear = 365;
+  const year = new Date().getFullYear();
+  const totalDaysInYear =
+    year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0) ? 366 : 365;
   const progressPercentage = (daysPassed / totalDaysInYear) * 100;
   const data = {
     labels: ["Прошло", "Осталось"],
@@ -27,7 +29,7 @@ const YearlyProgressCircle = ({ daysPassed }) => {
         Прошло {daysPassed} дней из {totalDaysInYear}.
       </p>
       <p className="percentageText">
-        Процентов {progressPercentage.toFixed(2)} %
+        Процентов {progressPercentage.toFixed(1)} %
       </p>
     </div>
   );
